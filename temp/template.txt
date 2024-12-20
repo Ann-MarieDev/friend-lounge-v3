@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+
+    <!-- Link to the CSS stylesheets -->
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- Link to JavaScript file -->
+    <script src=".js"></script>
+
+    <!-- Navbar HTML Code -->
+    <nav>
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="profile.html" class="nav-item">Profile</a>
+        <a href="lounge.html" class="nav-item">Lounge</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="settings.html" class="nav-item">Settings</a>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+
+
+</body>
+</html>

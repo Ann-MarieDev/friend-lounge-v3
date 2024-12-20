@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <!-- Navbar HTML Code -->
+    <nav>
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="profile.html" class="nav-item">Profile</a>
+        <a href="lounge.html" class="nav-item">Lounge</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="settings.html" class="nav-item">Settings</a>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+
+    <!-- Link to home.js at the bottom of the body -->
+    <script src="home.js"></script>
+
+    <!-- Columns -->
+    <div class="flex-grid">
+        <!-- First Column (Status + Friends Section) -->
+        <div class="col">
+            <!-- Status Section -->
+            <div class="section status-section">
+                <div class="status-inner">
+                    <!-- Left Section (Profile Image and Status Options) -->
+                    <div class="status-left">
+                        <img src="placeholder.png" alt="Profile" class="profile-img">
+                        <div class="status-options">
+                            <div class="status-option" id="online" onclick="changeStatus('Online')">Online</div>
+                            <div class="status-option" id="away" onclick="changeStatus('Away')">Away</div>
+                            <div class="status-option" id="dnd" onclick="changeStatus('Do Not Disturb')">Do Not Disturb</div>
+                            <div class="status-option" id="custom" onclick="showCustomStatusInput()">Custom</div>
+                        </div>
+                        <div id="custom-status-input" class="custom-status" style="display: none;">
+                            <input type="text" id="custom-status" placeholder="Enter status..." oninput="updateCustomStatus()">
+                        </div>
+                    </div>
+
+                    <!-- Right Section (Username, Status, Bio) -->
+                    <div class="status-right">
+                        <h3>Username</h3>
+                        <div id="current-status" class="current-status">Current Status: <span id="status-text">Offline</span></div>
+                        <div id="bio" class="bio">This is the user's bio.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friends Section -->
+            <div class="section friends-section">
+                <h3>Friends</h3>
+                <!-- Search Bar -->
+                <input type="text" class="friends-search-bar" placeholder="Search for friends...">
+                <!-- Example Friend List -->
+                <div class="friend-item">
+                    <img src="placeholder.png" alt="Friend" class="friend-img">
+                    <span class="friend-name">John Doe</span>
+                </div>
+                <div class="friend-item">
+                    <img src="placeholder.png" alt="Friend" class="friend-img">
+                    <span class="friend-name">Jane Smith</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Column (My Spaces Section) -->
+        <div class="col">
+            <div class="section spaces-section">
+                <h3>My Spaces</h3>
+                
+                <!-- Example Space 1 -->
+                <div class="space-box">
+                    <h4>Space Name: Chill Zone</h4>
+                    <p>Members:</p>
+                    <ul class="space-members">
+                        <li>John Doe</li>
+                        <li>Jane Smith</li>
+                        <li>Sam Wilson</li>
+                    </ul>
+                    <button class="join-chat-btn">Join Chat</button>
+                </div>
+
+                <!-- Example Space 2 -->
+                <div class="space-box">
+                    <h4>Space Name: Study Buddies</h4>
+                    <p>Members:</p>
+                    <ul class="space-members">
+                        <li>Alice Johnson</li>
+                        <li>Bob Brown</li>
+                        <li>Chris Green</li>
+                    </ul>
+                    <button class="join-chat-btn">Join Chat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Column (Empty or Other Content) -->
+        <div class="col">
+            <div class="section events-section">
+                <h3>More Info</h3>
+                <p>Content coming soon...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
